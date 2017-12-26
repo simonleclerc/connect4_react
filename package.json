@@ -1,0 +1,24 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Coonect 4",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "webpack --progress --colors",
+    "build:w": "webpack --progress --colors --watch"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "express": "4.16.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "source-map-loader": "^0.2.3",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  }
+}
