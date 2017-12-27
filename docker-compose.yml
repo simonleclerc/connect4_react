@@ -1,0 +1,13 @@
+version: '2.0'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    command: "http-server /app"
+    ports:
+      - 8098:8080
+    volumes:
+      - .:/app
