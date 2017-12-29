@@ -2,7 +2,7 @@ import {Cell, CellStateEnum} from "../model";
 import {Helper} from "./helper";
 
 export class Victory {
-    public isThereAWinner(cells: Cell[]): boolean {
+    static isThereAWinner(cells: Cell[]): boolean {
         let isWin = false;
         cells.map(c => {
             const row = Helper.getRowPos(c);
@@ -27,7 +27,7 @@ export class Victory {
         return isWin;
     }
 
-    private checkRightDiagVictory(cells: Cell[], cell: Cell): boolean {
+    static checkRightDiagVictory(cells: Cell[], cell: Cell): boolean {
         return (
             cells[cell.id + 8].state === cell.state
             && cells[cell.id + 16].state === cell.state
@@ -36,7 +36,7 @@ export class Victory {
 
     }
 
-    private checkLeftDiagVictory(cells: Cell[], cell: Cell): boolean {
+    static checkLeftDiagVictory(cells: Cell[], cell: Cell): boolean {
         return (
             cells[cell.id + 6].state === cell.state
             && cells[cell.id + 12].state === cell.state
@@ -45,7 +45,7 @@ export class Victory {
 
     }
 
-    private checkRowVictory(cells: Cell[], cell: Cell): boolean {
+    static checkRowVictory(cells: Cell[], cell: Cell): boolean {
         return (
             cells[cell.id + 1].state === cell.state
             && cells[cell.id + 2].state === cell.state
@@ -54,7 +54,7 @@ export class Victory {
 
     }
 
-    private checkColVictory(cells: Cell[], cell: Cell): boolean {
+    static checkColVictory(cells: Cell[], cell: Cell): boolean {
         return (
             cells[cell.id + 7].state === cell.state
             && cells[cell.id + 14].state === cell.state

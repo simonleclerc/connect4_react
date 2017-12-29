@@ -1,3 +1,13 @@
+export interface Action {
+    type: string;
+    [key: string]: any;
+}
+
+export interface Connect4State {
+    activePlayer: PlayerEnum;
+    cells: Cell[];
+}
+
 export interface Cell {
     state: CellStateEnum;
     id: number;

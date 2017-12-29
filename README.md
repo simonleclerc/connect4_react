@@ -11,3 +11,7 @@ Entrer dans le bash du container
 Lancer le build (watch mode), à éxécuter dans le container
 
     npm run build:w
+    
+Accéder au serveur de l'image docker 
+
+    http://localhost:8098/
